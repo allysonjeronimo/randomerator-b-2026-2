@@ -1,11 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import { StyleSheet, Text, View, Pressable } from 'react-native';
 
 export default function App() {
+  // JSX
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.title}>Randomerator</Text>
+      <Pressable style={styles.buttonPrimary}>
+        <Text style={styles.buttonText}>Gerar</Text>
+      </Pressable>
     </View>
   );
 }
@@ -13,8 +16,26 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ececec',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    padding: 16,
+    gap: 32
   },
+  title: {
+    color: "#7a7a7a",
+    fontWeight: "700",
+    fontSize: 32
+  },
+  buttonPrimary:{
+    backgroundColor: "#1c6fd4",
+    padding: 8,
+    borderRadius: 8,
+    width: "100%"
+  },
+  buttonText:{
+    color: "#fff",
+    fontSize: 24,
+    textAlign: "center"
+  }
 });
